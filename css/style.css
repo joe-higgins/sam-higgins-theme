@@ -118,7 +118,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   display: block;
   height: 120px;
 }
-#bio, #schedule, #perform, #media, #contact {
+#bio, #schedule, #perform, #media, #contact, #blog {
   /* min-height: 300px; */
   margin: 2em 5em;
   /* max-width: 100%; */
