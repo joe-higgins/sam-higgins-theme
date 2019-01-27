@@ -1,14 +1,16 @@
 /* parallax.css */
 @import url("meyer_reset.css");
 @import url("normalize_extract.css");
-@import url("typo.css");
+/* @import url("typo.css"); */
 
-
+*, html, body {
+  background-color: transparent;
+}
 body, html{
   height: 100%;
 }
 body {
-  font-family: 'Josefin Sans', 'Ariel' , sans-serif;
+  font-family: 'Josefin Sans', 'Arial' , sans-serif;
 }
 /* ==============  TYPOGRAPHY ==============  */
 p, li {
@@ -51,6 +53,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   /* height: 110px; */
   float: left;
   object-fit: cover;
+  animation-duration: 4s;
 }
 #navbar  { /* needs work  maybe a bootstrap navbar? */
   float: left;
@@ -80,6 +83,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   float: left;
   width: 30%;
   height: auto;
+  animation-duration: 2s;
 }
 .name {
   position: relative;
@@ -116,11 +120,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 #bio-anchor, #calendar-anchor, #perform-anchor, #media-anchor, #contact-anchor {
   display: block;
-  height: 120px;
+  height: 1px;
+
 }
 #bio, #schedule, #perform, #media, #contact, #blog {
   /* min-height: 300px; */
-  margin: 2em 5em;
+  border-top: 120px transparent;
+  padding: 2em 5em;
   /* max-width: 100%; */
   /* background-color: rgba(191, 20, 7, 0.5); */
   /* margin-bottom: 100px; */
@@ -162,7 +168,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .parallax1 {
   /* background image */
   background-image: url("../images/hero_1.2.jpg");
-
+  animation-duration: 5s;
 }
 .parallax2 {
   /* background image */
