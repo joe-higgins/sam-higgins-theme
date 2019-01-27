@@ -1,6 +1,6 @@
 /* parallax.css */
 @import url("meyer_reset.css");
-@import url("normalize_extract.css");
+/* @import url("normalize_extract.css"); */
 /* @import url("typo.css"); */
 
 *, html, body {
@@ -120,18 +120,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 #bio-anchor, #calendar-anchor, #perform-anchor, #media-anchor, #contact-anchor {
   display: block;
+  position: relative;
+  top: -80px;
   height: 1px;
 
 }
-#bio, #schedule, #perform, #media, #contact, #blog {
+.article {
   /* min-height: 300px; */
-  border-top: 120px transparent;
-  padding: 2em 5em;
   /* max-width: 100%; */
   /* background-color: rgba(191, 20, 7, 0.5); */
   /* margin-bottom: 100px; */
   -webkit-transform: translateZ(-1px);
   transform: translateZ(-1px);
+}
+#bio, #schedule, #perform, #media, #contact, #blog {
+  padding: 2em 5em;
 }
 
 #calendar, #media-contact {
