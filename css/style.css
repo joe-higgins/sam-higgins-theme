@@ -15,10 +15,16 @@ body {
 /* ==============  TYPOGRAPHY ==============  */
 p, li {
   line-height: 1.8;
+  padding: 1em;
 }
 a {
   color: black;
   text-decoration: none;
+}
+a:hover {
+  color: rgb(124, 3, 15);
+  text-decoration: none;
+  transition: 0.5s;
 }
 img {
   max-width:100%;
@@ -26,7 +32,7 @@ img {
 }
 #header  {
   display: grid;
-  grid-template-columns: 6% 94%;
+  grid-template-columns: 15% 85%;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -34,11 +40,11 @@ img {
   height: 120px;
   /* padding: 3% 0 0 0; */
   margin:  auto 0;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+76,ffffff+100&1+0,0.93+76,0+100 */
-background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 65%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0.8) 65%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.8) 65%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+65,ffffff+100&0.76+0,0.52+65,0+100 */
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.76) 0%, rgba(255,255,255,0.52) 65%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0.76) 0%,rgba(255,255,255,0.52) 65%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,255,255,0.76) 0%,rgba(255,255,255,0.52) 65%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 #logo, #navbar {
@@ -53,12 +59,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   /* height: 110px; */
   float: left;
   object-fit: cover;
-  animation-duration: 4s;
+  animation-duration: 3s;
 }
 #navbar  { /* needs work  maybe a bootstrap navbar? */
   float: left;
   /* min-width: 79%; */
 }
+
 .container {
   margin: 0 0 0 5em;
   display: flex;
@@ -67,9 +74,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 }
 .container li {
-  padding: 1em 0;
+  padding: 3em 0;
   flex: 1;
+}
 
+.uk-active a {
+  color: rgb(124, 3, 15);
+  text-decoration: underline !important;
 }
 #home {
   position: absolute;
@@ -115,26 +126,45 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   text-align: right;
 }
 
-.heading {
+#bio-heading {
+  width: 50%;
+  border-bottom: 2px solid rgb(95, 17, 26);
   padding: 1em 0;
+}
+#bio-heading:after {
+  z-index: -99;
+  position: absolute;
+  display: inline-block;
+  content: "ABOUT";
+  font-size: 9em;
+  color: white;
+  right: 1vw;
+  bottom: -8vh;
+  background-color: rgba(95, 17, 26, 0.2);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.9);
+
 }
 #bio-anchor, #calendar-anchor, #perform-anchor, #media-anchor, #contact-anchor {
   display: block;
   position: relative;
-  top: -80px;
+  top: -100px;
   height: 1px;
 
 }
 .article {
-  /* min-height: 300px; */
+  min-height: 300px;
   /* max-width: 100%; */
   /* background-color: rgba(191, 20, 7, 0.5); */
   /* margin-bottom: 100px; */
   -webkit-transform: translateZ(-1px);
   transform: translateZ(-1px);
 }
-#bio, #schedule, #perform, #media, #contact, #blog {
-  padding: 2em 5em;
+#bio, #calendar, #perform, #media, #contact, #blog {
+  padding: 1em 7em 7em 7em;
 }
 
 #calendar, #media-contact {
@@ -144,7 +174,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #schedule, #perform, {
 
 }
-
+#bio-heading {
+  /* box-shadow: 17px 0px 46px rgba(95, 17, 26,.1); */
+}
 /* ================ PARALLAX STYLES ================ */
 
 [class*="parallax"]  {
@@ -157,7 +189,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
   opacity: 0.3;
   filter: alpha(opacity=30); /* For IE8 and earlier */
-  /* height: 70%; */
+  height: 90%;
   /* scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -171,15 +203,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .parallax1 {
   /* background image */
   background-image: url("../images/hero_1.2.jpg");
-  animation-duration: 5s;
+  animation-duration: 4s;
 }
 .parallax2 {
   /* background image */
   background-image: url("../images/operaHouse1.png");
+  animation-duration: 4s;
+
 }
 .parallax3 {
   /* background image */
   background-image: url("../images/copenhagenOpera.png");
+  animation-duration: 4s;
 }
 
 /* =========== MEDIA QUERIES =============== */
