@@ -77,9 +77,11 @@
           <li class="uk-parent"><a href="#calendar-anchor">Schedule</a></li>
           <li class="uk-parent"><a href="#media-anchor">Media</a></li>
           <li class="uk-parent"><a href="#media-anchor">Contact</a></li>
-          <li class="uk-parent"><a href="" class="uk-icon-ratio uk-margin-small-right" uk-icon="twitter"></a></li>
-          <li class="uk-parent"><a href="" class="uk-icon-ratio  uk-margin-small-right" uk-icon="facebook"></a></li>
-          <li class="uk-parent"><a href="" class="uk-icon-ratio" uk-icon="instagram"></a></li>
+          <li class="uk-parent">
+            <a href="" class="uk-icon-ratio uk-margin-small-right" uk-icon="twitter"></a>
+            <a href="" class="uk-icon-ratio  uk-margin-small-right" uk-icon="facebook"></a>
+            <a href="" class="uk-icon-ratio" uk-icon="instagram"></a>
+          </li>
         </ul>
       </nav>
 
@@ -93,7 +95,7 @@
     <div id="home">
       <div id="hero-overlay" class="uk-animation-fade uk-animation-slide-left uk-animation-15">
         <div class="name">
-          <img src="images/sam_higgins.png" alt="">
+          <img src="images/sam_higgins.png" alt="Sam Higgins">
           <!-- <h1 class="first-name"><b>SAM</b></h1>
           <h1 class="last-name">HIGGINS</h1> -->
           <h3 class="voice">Countertenor</h3>
@@ -165,59 +167,73 @@
     <!-- begin page 3 -->
     <div class="parallax2"></div>
 
-    <article class="article">
     <div id="calendar-anchor"></div>
-    <div id="calendar">
-      <div id="schedule" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-        <h1 class="heading">Upcoming Performances</h1>
-        <ul>
-          <li>Praesent placerat risus quis eros.</li>
-          <li>Fusce pellentesque suscipit nibh.</li>
-          <li>Integer vitae libero ac risus egestas placerat.</li>
-          <li>Vestibulum commodo felis quis tortor.</li>
-          <li>Vivamus molestie gravida turpis.</li>
-          <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
-          <li>Integer malesuada commodo nulla.</li>
-        </ul>
+    <article class="article">
+      <h1 id="calendar-heading" class="heading">Performances</h1>
+      <div id="calendar">
+        <div id="upcoming" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+          <h1 class="heading">Upcoming Performances</h1>
+          <div class="slider">
+            <div class="slider-box">
+              <h1>February 21, 2019</h1>
+                <a href="#">
+                  <img src="images/met-guild.png" alt="">
+                </a>
+              <h3>H.S. Singers Intensive</h3>
+              <h4>5:30 PM,  Lincoln Center</h4>
+            </div>
+            </ul>
+          </div>
+          <!-- <ul>
+            <li>Praesent placerat risus quis eros.</li>
+            <li>Fusce pellentesque suscipit nibh.</li>
+            <li>Integer vitae libero ac risus egestas placerat.</li>
+            <li>Vestibulum commodo felis quis tortor.</li>
+            <li>Vivamus molestie gravida turpis.</li>
+            <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
+            <li>Integer malesuada commodo nulla.</li>
+          </ul> -->
+        </div>
+        <div id="past" uk-scrollspy="cls: uk-animation-slide-right; repeat: true delay: 500">
+          <h1 class="heading">Past Perfromances</h1>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            <li>Vestibulum auctor dapibus neque.</li>
+            <li>Nunc dignissim risus id metus.</li>
+            <li>Cras ornare tristique elit.</li>
+            <li>Vivamus vestibulum nulla nec ante.</li>
+            <li>Praesent placerat risus quis eros.</li>
+            <li>Fusce pellentesque suscipit nibh.</li>
+            <li>Integer vitae libero ac risus egestas placerat.</li>
+            <li>Vestibulum commodo felis quis tortor.</li>
+            <li>Ut aliquam sollicitudin leo.</li>
+            <li>Cras iaculis ultricies nulla.</li>
+            <li>Donec quis dui at dolor tempor interdum.</li>
+            <li>Vivamus molestie gravida turpis.</li>
+            <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
+            <li>Nam convallis pellentesque nisl.</li>
+            <li>Integer malesuada commodo nulla.</li>
+          </ul>
+        </div>
       </div>
-      <div id="perform" uk-scrollspy="cls: uk-animation-slide-right; repeat: true delay: 500">
-        <h1 class="heading">Past Perfromances</h1>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-          <li>Aliquam tincidunt mauris eu risus.</li>
-          <li>Vestibulum auctor dapibus neque.</li>
-          <li>Nunc dignissim risus id metus.</li>
-          <li>Cras ornare tristique elit.</li>
-          <li>Vivamus vestibulum nulla nec ante.</li>
-          <li>Praesent placerat risus quis eros.</li>
-          <li>Fusce pellentesque suscipit nibh.</li>
-          <li>Integer vitae libero ac risus egestas placerat.</li>
-          <li>Vestibulum commodo felis quis tortor.</li>
-          <li>Ut aliquam sollicitudin leo.</li>
-          <li>Cras iaculis ultricies nulla.</li>
-          <li>Donec quis dui at dolor tempor interdum.</li>
-          <li>Vivamus molestie gravida turpis.</li>
-          <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
-          <li>Nam convallis pellentesque nisl.</li>
-          <li>Integer malesuada commodo nulla.</li>
-        </ul>
-      </div>
-    </div>
   </article>
     <!-- end page 3 -->
     <!-- begin page 4 -->
 
     <div class="parallax1 uk-animation-kenburns uk-animation-reverse"></div>
-<article class="article">
-    <div id="media-anchor"></div>
-    <div id="media-contact">
-      <div id="media">
-        <h1 class="heading">Media</h1>
+  <article class="article">
+      <div id="media-anchor"></div>
+
+      <div id="media-contact">
+        <h1 id="media-heading" class="heading">Media</h1>
+        <div id="media">
+          <h1 class="heading">Media</h1>
+        </div>
+        <div id="contact">
+          <h1 class="heading">Contact</h1>
+        </div>
       </div>
-      <div id="contact">
-        <h1 class="heading">Contact</h1>
-      </div>
-    </div>
     </article>
     <!-- end page 4 -->
     <div class="parallax3 uk-animation-kenburns uk-animation-reverse"></div>

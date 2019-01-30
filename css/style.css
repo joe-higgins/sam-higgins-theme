@@ -6,7 +6,10 @@
 *, html, body {
   background-color: transparent;
 }
-body, html{
+html {
+
+}
+html, body {
   height: 100%;
 }
 body {
@@ -84,16 +87,23 @@ a#mobile-anchor {
 
 }
 .nav li {
+  /* font-size: 1.4em; */
   padding: 2em 0;
   flex: 1;
 }
-.uk-icon-button {
-  float; left;
+.uk-nav>li>a {
+display: block;
+float: left;
+padding: 5px 0;
+text-transform: uppercase;
 }
 
 .uk-active a {
   color: rgb(124, 3, 15);
   text-decoration: underline !important;
+}
+.uk-parent {
+  text-transform: capitalize;
 }
 #home {
   position: absolute;
@@ -122,8 +132,9 @@ a#mobile-anchor {
   left: 3em;
 } */
 .voice {
+  color: grey;
   position: relative;
-  left: 10em;
+  left: 12em;
 }
 .head-shot  {/* image */
   float: left;
@@ -138,17 +149,33 @@ a#mobile-anchor {
   padding: 10% 0 0 5%;
   text-align: right;
 }
+.heading {
+  padding: 2em 0 1em 0;
+}
+.article {
+  min-height: 300px;
+  padding: 2em 8em;
+  /* max-width: 100%; */
+  /* background-color: rgba(191, 20, 7, 0.5); */
+  /* margin-bottom: 100px; */
+  -webkit-transform: translateZ(-1px);
+  transform: translateZ(-1px);
+}
+.slider-box {
+  width: 33%;
+}
 
-#bio-heading {
+h1[id*="-heading"] {
+  text-transform: uppercase;
   width: 50%;
   border-bottom: 2px solid rgb(95, 17, 26);
   padding: 1em 0;
 }
-#bio-heading:after {
+h1[id*="-heading"]:after {
   z-index: -99;
   position: absolute;
   display: inline-block;
-  content: "ABOUT";
+
   font-size: 9em;
   color: white;
   right: 1vw;
@@ -159,7 +186,15 @@ a#mobile-anchor {
   background-clip: text;
   color: transparent;
   text-shadow: 0px 3px 3px rgba(255,255,255,0.9);
-
+}
+#bio-heading:after {
+  content: "ABOUT";
+}
+#calendar-heading:after {
+  content: "PEFORMANCES";
+}
+#media-heading:after {
+  content: "MEDIA";
 }
 #bio-anchor, #calendar-anchor, #perform-anchor, #media-anchor, #contact-anchor {
   display: block;
@@ -168,29 +203,25 @@ a#mobile-anchor {
   height: 1px;
 
 }
-.article {
-  min-height: 300px;
-  padding: 8em;
-  /* max-width: 100%; */
-  /* background-color: rgba(191, 20, 7, 0.5); */
-  /* margin-bottom: 100px; */
-  -webkit-transform: translateZ(-1px);
-  transform: translateZ(-1px);
-}
-#bio, #calendar, #schedule, #perform, #media, #contact, #blog {
-  /* padding: 1em 7em 7em 7em; */
+
+#bio, #calendar, #upcoming, #past, #media, #contact, #blog {
+  /* padding: 1em 0; */
 }
 
-#calendar, #media-contact {
+#calendar {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "row-1"
+    "row-2";
+  /* grid-template-columns: 1fr 1fr; */
 }
-#schedule, #perform {
+#upcoming {
+  grid-area: row-1;
+}
+#past {
+  grid-area: row-2;
+}
 
-}
-#bio-heading {
-  /* box-shadow: 17px 0px 46px rgba(95, 17, 26,.1); */
-}
 /* ================ PARALLAX STYLES ================ */
 
 [class*="parallax"]  {
@@ -245,18 +276,26 @@ a#mobile-anchor {
     background-position: right -8em center;
   }
   #logo {
-    position: fixed;
-    right: 0px;
+    display: none;
+    /* position: fixed;
+    right: 0px; */
 
   }
   #hero-overlay  {
     position: fixed;
-    right: 25%;
-    top: -6em;
+    right: 0px;
+    /* position: fixed;
+    right: 25%; */
+    top: -7em;
     z-index: 999;
   }
+  .voice {
+    color: grey;
+    position: relative;
+    left: 2.5em;
+  }
   .uk-offcanvas-bar {
-    width: 200px;
+    width: 240px;
   }
 
 }
