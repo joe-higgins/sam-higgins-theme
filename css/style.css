@@ -1,7 +1,7 @@
 /* parallax.css */
 @import url("meyer_reset.css");
-/* @import url("normalize_extract.css"); */
-/* @import url("typo.css"); */
+@import url("normalize_extract.css");
+@import url("typo.css");
 
 *, html, body {
   background-color: transparent;
@@ -164,6 +164,9 @@ text-transform: uppercase;
 .slider-box {
   width: 33%;
 }
+.slider-box img {
+  padding: 1em 0;
+}
 
 h1[id*="-heading"] {
   text-transform: uppercase;
@@ -176,7 +179,7 @@ h1[id*="-heading"]:after {
   position: absolute;
   display: inline-block;
 
-  font-size: 9em;
+  font-size: 5em;
   color: white;
   right: 1vw;
   bottom: -3vh;
