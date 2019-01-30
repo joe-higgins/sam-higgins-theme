@@ -15,20 +15,79 @@
     <title>Sam Higgins - Countertenor</title>
   </head>
   <body>
+
+
+
     <!-- begin nav -->
     <header id="header">
+
       <div id="logo" class="uk-animation-fade"><img src="images/logo.png" alt="LOGO"></div>
+      <!-- +++++++++++ MOBILE MENU +++++++++++++++++++++ -->
+      <!-- +++++++++++ HIDDEN ABOVE 980px  +++++++++++++++++++ -->
+
+          <a id="mobile-anchor" href="#mobile-menu" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle></a>
+
+      <!-- <a id="mobile-anchor" href="#mobile-menu" uk-toggle>MENU</a> -->
+
+        <!-- This is the off-canvas -->
+      <div id="mobile-menu" uk-offcanvas>
+        <div class="uk-offcanvas-bar uk-offcanvas-bar-show" mode="push">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">
+              <li><a href="">Item</a></li>
+              <li class="uk-active"><a href="">Active</a></li>
+
+              <li class="uk-parent" aria-expanded="false">
+                  <a href="#">Parent</a>
+                  <div style="overflow:hidden;height:0;position:relative;" class="uk-hidden"><ul class="uk-nav-sub" role="menu">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a>
+                          <ul>
+                              <li><a href="">Sub item</a></li>
+                              <li><a href="">Sub item</a></li>
+                          </ul>
+                      </li>
+                  </ul></div>
+              </li>
+
+              <li class="uk-parent" aria-expanded="false">
+                  <a href="#">Parent</a>
+                  <div style="overflow:hidden;height:0;position:relative;" class="uk-hidden"><ul class="uk-nav-sub" role="menu">
+                      <li><a href="">Sub item</a></li>
+                      <li><a href="">Sub item</a></li>
+                  </ul></div>
+              </li>
+
+              <li><a href="">Item</a></li>
+
+              <li class="uk-nav-header">Header</li>
+              <li class="uk-parent"><a href=""><i class="uk-icon-star"></i> Parent</a></li>
+              <li><a href=""><i class="uk-icon-twitter"></i> Item</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href=""><i class="uk-icon-rss"></i> Item</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- +++++++++++++ END MOBILE MENU ++++++++++++++++++++++++++++ -->
+
       <nav id="navbar" class="">
-        <ul class="container uk-nav" uk-scrollspy-nav="closest: li; scroll: true">
+        <ul class="nav uk-nav" uk-scrollspy-nav="closest: li; scroll: true">
           <li class="uk-parent"><a href="#home">Home</a></li>
           <li class="uk-parent"><a href="#bio-anchor">Bio</a></li>
           <li class="uk-parent"><a href="#calendar-anchor">Schedule</a></li>
           <li class="uk-parent"><a href="#media-anchor">Media</a></li>
           <li class="uk-parent"><a href="#media-anchor">Contact</a></li>
-          <li class="uk-parent"><a href="#media-anchor">F   Tw   In</a></li>
+          <li class="uk-parent"><a href="" class="uk-icon-ratio uk-margin-small-right" uk-icon="twitter"></a></li>
+          <li class="uk-parent"><a href="" class="uk-icon-ratio  uk-margin-small-right" uk-icon="facebook"></a></li>
+          <li class="uk-parent"><a href="" class="uk-icon-ratio" uk-icon="instagram"></a></li>
         </ul>
       </nav>
+
+
     </header>
+
+
+
     <!-- end nav -->
     <!-- begin page 1 -->
     <div id="home">
@@ -52,8 +111,52 @@
     <!-- begin page 2 -->
     <div id="bio-anchor"></div>
     <article class="article">
+
+      <!-- <a href="#offcanvas-3">CLICK HERE</a>
+      <div id="offcanvas-3" class="uk-offcanvas uk-active" uk-offcanvas="mode: push" aria-hidden="false">
+        <div class="uk-offcanvas-bar uk-offcanvas-bar-show" mode="push">
+
+            <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">
+                <li><a href="">Item</a></li>
+                <li class="uk-active"><a href="">Active</a></li>
+
+                <li class="uk-parent" aria-expanded="false">
+                    <a href="#">Parent</a>
+                    <div style="overflow:hidden;height:0;position:relative;" class="uk-hidden"><ul class="uk-nav-sub" role="menu">
+                        <li><a href="">Sub item</a></li>
+                        <li><a href="">Sub item</a>
+                            <ul>
+                                <li><a href="">Sub item</a></li>
+                                <li><a href="">Sub item</a></li>
+                            </ul>
+                        </li>
+                    </ul></div>
+                </li>
+
+                <li class="uk-parent" aria-expanded="false">
+                    <a href="#">Parent</a>
+                    <div style="overflow:hidden;height:0;position:relative;" class="uk-hidden"><ul class="uk-nav-sub" role="menu">
+                        <li><a href="">Sub item</a></li>
+                        <li><a href="">Sub item</a></li>
+                    </ul></div>
+                </li>
+
+                <li><a href="">Item</a></li>
+
+                <li class="uk-nav-header">Header</li>
+                <li class="uk-parent"><a href=""><i class="uk-icon-star"></i> Parent</a></li>
+                <li><a href=""><i class="uk-icon-twitter"></i> Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href=""><i class="uk-icon-rss"></i> Item</a></li>
+            </ul>
+
+        </div>
+
+      </div> -->
+
+
       <div id="bio" class="">
-        <h1 id="bio-heading" class="heading uk-card-title">About Sam</h1>
+        <h1 id="bio-heading" class="heading">About Sam</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
       </div>
@@ -62,9 +165,10 @@
     <!-- begin page 3 -->
     <div class="parallax2"></div>
 
+    <article class="article">
     <div id="calendar-anchor"></div>
     <div id="calendar">
-      <div id="schedule" uk-scrollspy="cls: uk-animation-slide-left; repeat: true delay: 500">
+      <div id="schedule" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
         <h1 class="heading">Upcoming Performances</h1>
         <ul>
           <li>Praesent placerat risus quis eros.</li>
@@ -99,25 +203,30 @@
         </ul>
       </div>
     </div>
+  </article>
     <!-- end page 3 -->
     <!-- begin page 4 -->
-    <div class="parallax1 uk-animation-kenburns uk-animation-reverse"></div>
 
+    <div class="parallax1 uk-animation-kenburns uk-animation-reverse"></div>
+<article class="article">
     <div id="media-anchor"></div>
     <div id="media-contact">
       <div id="media">
-      <h1 class="heading">Media</h1>
+        <h1 class="heading">Media</h1>
       </div>
       <div id="contact">
         <h1 class="heading">Contact</h1>
       </div>
     </div>
+    </article>
     <!-- end page 4 -->
     <div class="parallax3 uk-animation-kenburns uk-animation-reverse"></div>
 
     <div id="blog" class="">
       <h3>Add blog loop here</h3>
     </div>
-
+    <a href="" uk-totop></a>
   </body>
+
+
 </html>
