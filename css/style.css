@@ -228,6 +228,7 @@ h1[id*="-heading"]:after {
   grid-template-areas:
     "area-1"
     "area-2";
+  /* grid-template-rows: 1fr; */
   /* grid-template-columns: 1fr 1fr; */
 }
 #upcoming {
