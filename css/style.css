@@ -1,3 +1,6 @@
+/* Updated 1/30/19 11:40pm */
+
+
 /* parallax.css */
 @import url("meyer_reset.css");
 @import url("normalize_extract.css");
@@ -24,7 +27,7 @@ a {
   color: black;
   text-decoration: none;
 }
-a:hover {
+a:hover, ul>li>a:hover {
   color: rgb(124, 3, 15);
   text-decoration: none;
   transition: 0.5s;
@@ -34,15 +37,16 @@ img {
   max-height:100%;
 }
 a .uk-button {
-  z-index: 99;
+    z-index: 99;
 }
 
 #header  {
+  position: fixed;
+  z-index: 3;
   display: grid;
   grid-template-columns: 15% 85%;
-  position: fixed;
+
   top: 0;
-  z-index: 1;
   min-width: 100%;
   height: 120px;
   /* padding: 3% 0 0 0; */
@@ -60,6 +64,8 @@ a .uk-button {
 
 }
 #logo {
+  position: relative;
+  z-index: 4
   float: left;
   margin: .5em 3em;
   width: 80px;
@@ -67,13 +73,16 @@ a .uk-button {
   float: left;
   object-fit: cover;
   animation-duration: 2s;
-  z-index: 2;
 }
 #navbar  { /* needs work  maybe a bootstrap navbar? */
+  position: relative;
+  z-index: 4;
   float: left;
   /* min-width: 79%; */
 }
 a#mobile-anchor {
+  position: relative;
+  z-index: 4;
   display: none;
 }
 /* #mobile-menu {
@@ -106,13 +115,14 @@ text-transform: uppercase;
   text-transform: capitalize;
 }
 #home {
-  position: absolute;
-  z-index: 1;
   /* top: 120px; */
   width: 100%;
 }
 
-#hero-overlay  {
+#name-overlay  {
+  position: fixed;
+  z-index: 1 !important;
+  top: 8em;
   margin: 0 0 0 3%;
   float: left;
   width: 30%;
@@ -120,28 +130,18 @@ text-transform: uppercase;
   animation-duration: 2s;
 }
 .name {
-  position: relative;
-  top: 8em;
+
 }
-/* .first-name {
-  position: relative;
-  left: 1em;
-}
-.last-name {
-  position: relative;
-  left: 3em;
-} */
 .voice {
   color: grey;
   position: relative;
-  left: 12em;
+  left: 9em;
 }
 .head-shot  {/* image */
   float: left;
   width: 100%;
   height: auto;
 }
-
 
 .home-content {
   float: left;
@@ -153,19 +153,28 @@ text-transform: uppercase;
   padding: 2em 0 1em 0;
 }
 .article {
+  /* -webkit-transform: translate3d(0,0,0); */
+  position: relative;
+  z-index: 2 !important;
   min-height: 300px;
-  padding: 2em 8em;
+  padding: 2em 8em 7em 8em;
   /* max-width: 100%; */
-  /* background-color: rgba(191, 20, 7, 0.5); */
+  background-color: white;
   /* margin-bottom: 100px; */
-  -webkit-transform: translateZ(-1px);
-  transform: translateZ(-1px);
+  /* -webkit-transform: translateZ(-1px); */
+  /* transform: translateZ(-1px); */
+}
+.uk-slider-items:not(.uk-grid) {
+  display: block;
 }
 .slider-box {
-  width: 33%;
+  width: 47%;
 }
 .slider-box img {
   padding: 1em 0;
+}
+.uk-slider-container {
+height: 80vh;
 }
 
 h1[id*="-heading"] {
@@ -199,7 +208,11 @@ h1[id*="-heading"]:after {
 #media-heading:after {
   content: "MEDIA";
 }
+#blog-heading:after {
+  content: "BLOG";
+}
 #bio-anchor, #calendar-anchor, #perform-anchor, #media-anchor, #contact-anchor {
+
   display: block;
   position: relative;
   top: -100px;
@@ -208,21 +221,20 @@ h1[id*="-heading"]:after {
 }
 
 #bio, #calendar, #upcoming, #past, #media, #contact, #blog {
-  /* padding: 1em 0; */
 }
 
 #calendar {
   display: grid;
   grid-template-areas:
-    "row-1"
-    "row-2";
+    "area-1"
+    "area-2";
   /* grid-template-columns: 1fr 1fr; */
 }
 #upcoming {
-  grid-area: row-1;
+  grid-area: area-1;
 }
 #past {
-  grid-area: row-2;
+  grid-area: area-2;
 }
 
 /* ================ PARALLAX STYLES ================ */
@@ -234,7 +246,6 @@ h1[id*="-heading"]:after {
   overflow-y: auto;
   -webkit-perspective: 1px;
   perspective: 1px;
-
   opacity: 0.3;
   filter: alpha(opacity=30); /* For IE8 and earlier */
   height: 90%;
@@ -251,18 +262,18 @@ h1[id*="-heading"]:after {
 .parallax1 {
   /* background image */
   background-image: url("../images/hero_1.2.jpg");
-  animation-duration: 4s;
+  animation-duration: 3s;
 }
 .parallax2 {
   /* background image */
   background-image: url("../images/operaHouse1.png");
-  animation-duration: 4s;
+  animation-duration: 3s;
 
 }
 .parallax3 {
   /* background image */
   background-image: url("../images/copenhagenOpera.png");
-  animation-duration: 4s;
+  animation-duration: 3s;
 }
 
 /* =========== MEDIA QUERIES =============== */
@@ -282,9 +293,8 @@ h1[id*="-heading"]:after {
     display: none;
     /* position: fixed;
     right: 0px; */
-
   }
-  #hero-overlay  {
+  #name-overlay  {
     position: fixed;
     right: 0px;
     /* position: fixed;

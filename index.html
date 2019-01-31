@@ -15,13 +15,19 @@
     <title>Sam Higgins - Countertenor</title>
   </head>
   <body>
-
-
-
+    <div id="name-overlay" class="uk-animation-fade uk-animation-slide-left uk-animation-15">
+      <div class="name">
+        <img src="images/sam_higgins.png" alt="Sam Higgins">
+        <!-- <h1 class="first-name"><b>SAM</b></h1>
+        <h1 class="last-name">HIGGINS</h1> -->
+        <h3 class="voice">Countertenor</h3>
+      </div>
+    </div>
     <!-- begin nav -->
     <header id="header">
 
       <div id="logo" class="uk-animation-fade"><img src="images/logo.png" alt="LOGO"></div>
+
       <!-- +++++++++++ MOBILE MENU +++++++++++++++++++++ -->
       <!-- +++++++++++ HIDDEN ABOVE 980px  +++++++++++++++++++ -->
 
@@ -70,7 +76,7 @@
       </div>
       <!-- +++++++++++++ END MOBILE MENU ++++++++++++++++++++++++++++ -->
 
-      <nav id="navbar" class="">
+      <nav id="navbar" class="uk-nav uk-nav-default">
         <ul class="nav uk-nav" uk-scrollspy-nav="closest: li; scroll: true">
           <li class="uk-parent"><a href="#home">Home</a></li>
           <li class="uk-parent"><a href="#bio-anchor">Bio</a></li>
@@ -88,24 +94,13 @@
 
     </header>
 
-
-
     <!-- end nav -->
+
+
     <!-- begin page 1 -->
-    <div id="home">
-      <div id="hero-overlay" class="uk-animation-fade uk-animation-slide-left uk-animation-15">
-        <div class="name">
-          <img src="images/sam_higgins.png" alt="Sam Higgins">
-          <!-- <h1 class="first-name"><b>SAM</b></h1>
-          <h1 class="last-name">HIGGINS</h1> -->
-          <h3 class="voice">Countertenor</h3>
-        </div>
-      </div>
-      <!-- <div class="home-content">
-        <h1>Sam Higgins</h1>
-        <h3>Countertenor</h3>
-      </div> -->
-    </div>
+    <div id="home"></div>
+
+
     <!-- end page 1 -->
 
     <div class="parallax1 uk-animation-kenburns uk-animation-reverse"></div>
@@ -173,25 +168,79 @@
       <div id="calendar">
         <div id="upcoming" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
           <h1 class="heading">Upcoming Performances</h1>
-          <div class="slider">
-            <div class="slider-box">
-              <h3>February 21, 2019</h3>
-                <a href="#">
-                  <img src="images/met-guild.png" alt="">
-                </a>
-              <h4>H.S. Singers Intensive</h4>
-              <h5>5:30 PM,  Lincoln Center</h5>
-            </div>
-          </div>
-          <!-- <ul>
-            <li>Praesent placerat risus quis eros.</li>
-            <li>Fusce pellentesque suscipit nibh.</li>
-            <li>Integer vitae libero ac risus egestas placerat.</li>
-            <li>Vestibulum commodo felis quis tortor.</li>
-            <li>Vivamus molestie gravida turpis.</li>
-            <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
-            <li>Integer malesuada commodo nulla.</li>
-          </ul> -->
+
+
+          <div uk-slider="center: true">
+
+    <div class="sliderv uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+        <ul class="slider-box uk-slider-items uk-child-width-1-1@s uk-grid" uk-height-viewport="offset-top: true; offset-bottom: 50">
+            <li class="uk-transition-toggle" tabindex="0">
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/met-guild.png" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/met-guild.png" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/sam-singing.png" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/met-guild.png" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-transition-toggle" tabindex="0">
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/bsologo-hires.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous">PREV</a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next">NEXT</a>
+
+    </div>
+
+    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+</div>
+          <!-- end slider -->
         </div>
         <div id="past" uk-scrollspy="cls: uk-animation-slide-right; repeat: true delay: 500">
           <h1 class="heading">Past Performances</h1>
@@ -204,7 +253,9 @@
               <h4>Y.A.C. at the B.S.O. Pops</h4>
               <h5>8 PM, Symphony Hall, Boston</h5>
             </div>
+            <!-- end slider box -->
           </div>
+          <!-- end slider -->
       </div>
   </article>
     <!-- end page 3 -->
@@ -226,11 +277,16 @@
     </article>
     <!-- end page 4 -->
     <div class="parallax3 uk-animation-kenburns uk-animation-reverse"></div>
-
-    <div id="blog" class="">
-      <h3>Add blog loop here</h3>
-    </div>
+    <article class="article">
+      <div id="blog" class="">
+        <h1 id="blog-heading" class="heading">Blog</h1>
+        <h3>Add blog loop here</h3>
+      </div>
+    </article>
     <a href="" uk-totop></a>
+
+
+
   </body>
 
 
