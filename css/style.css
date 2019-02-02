@@ -39,7 +39,9 @@ img {
 a .uk-button {
     z-index: 99;
 }
-
+em {
+  color: inherit !important;
+}
 #header  {
   position: fixed;
   z-index: 3;
@@ -182,6 +184,11 @@ text-transform: uppercase;
 .uk-slider-container {
 height: 110vh;
 }
+.uk-slider-items {
+    will-change: transform;
+    position: relative;
+    height: 400px;
+}
 .uk-card-default {
 background: transparent;
 }
@@ -236,10 +243,14 @@ h1[id*="-heading"]:after {
 #media-heading:after {
   content: "MEDIA";
 }
+#contact-heading:after {
+  content: "CONTACT";
+}
 #blog-heading:after {
   content: "BLOG";
 }
-#bio-anchor, #calendar-anchor, #perform-anchor, #media-anchor, #contact-anchor {
+/* condense these using * */
+#bio-anchor, #calendar-anchor, #perform-anchor, #media-anchor, #contact-anchor, #blog-anchor {
 
   display: block;
   position: relative;
@@ -283,6 +294,7 @@ h1[id*="-heading"]:after {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  animation-duration: 3s;
 }
 .parallax1  {
   opacity: 1;
@@ -291,22 +303,27 @@ h1[id*="-heading"]:after {
 .parallax1 {
   /* background image */
   background-image: url("../images/hero_1.2.jpg");
-  animation-duration: 3s;
+
 }
 .parallax2 {
   /* background image */
   background-image: url("../images/operaHouse1.png");
-  animation-duration: 3s;
+
 
 }
 .parallax3 {
   /* background image */
   background-image: url("../images/copenhagenOpera.png");
-  animation-duration: 3s;
+
+}
+.parallax4 {
+  /* background image */
+  background-image: url("../images/7207237440.png");
+
 }
 
 /* =========== MEDIA QUERIES =============== */
-@media screen and (max-width: 980px){
+@media screen and (max-width: 960px){
   #navbar {
     display: none;
   }
