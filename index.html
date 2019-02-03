@@ -35,7 +35,7 @@
 
         <!-- This is the off-canvas panel -->
 
-      <div id="mobile-menu" uk-offcanvas>
+      <div id="mobile-menu" class="uk-offcanvas-content" uk-offcanvas="">
         <div class="uk-offcanvas-bar uk-offcanvas-bar-show">
           <button class="uk-offcanvas-close" type="button" uk-close></button>
           <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="" >
@@ -44,15 +44,15 @@
             <li class="uk-parent" aria-expanded="false">
                 <a href="">Schedule</a>
                   <ul class="uk-nav-sub" role="menu">
-                    <li><a href="">upcoming</a></li>
-                    <li><a href="">Past</a></li>
+                    <li><a href="#upcoming-anchor">Upcoming</a></li>
+                    <li><a href="#past-anchor">Past</a></li>
                   </ul>
             </li>
             <li class="uk-parent" aria-expanded="false">
                 <a href="">Media</a>
-                  <ul class="uk-nav-sub" role="menu">
+                  <ul class="uk-nav-sub" role="menu" hidden aria-hidden="true">
                     <li><a href="#media-anchor">Videos</a></li>
-                    <li><a href="">News</a></li>
+                    <li><a href="#news-anchor">News</a></li>
                   </ul>
             </li>
             <li class=""><a href="#contact-anchor">Contact</a></li>
@@ -372,8 +372,6 @@ document.write(out);
       </div>
     </article>
     <a href="" uk-totop></a>
-
-
 
   </body>
 

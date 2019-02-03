@@ -13,7 +13,7 @@ html {
 
 }
 html, body {
-  height: 100%;
+  /* height: 100%; */
 }
 body {
   font-family: 'Josefin Sans', 'Arial' , sans-serif;
@@ -329,6 +329,8 @@ h1[id*="-heading"]:after {
   #navbar {
     display: none;
   }
+  #mobile-menu {
+  }
   a#mobile-menu-link {
     color: black;
     display: block;
@@ -344,7 +346,7 @@ h1[id*="-heading"]:after {
   }
   .parallax1  {
     /* width: 140%; */
-    /* background-position: right -3em center; */
+    background-position: right -3em center;
   }
   .article  {
     padding: 2em;
