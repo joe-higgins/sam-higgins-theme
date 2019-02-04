@@ -119,6 +119,21 @@ text-transform: uppercase;
 .uk-parent {
   text-transform: capitalize;
 }
+.uk-dropdown  {
+  min-width: 140px;
+}
+.uk-dropdown, .uk-dropdown li,.uk-dropdown>li>a {
+  padding: 0 !important;
+}
+.uk-dropdown li a {
+  padding: 1.4em 1em 0 1em;
+}
+.uk-dropdown ul:last-child {
+  padding-bottom: 1.4em;
+}
+ul.uk-nav-sub {
+padding: 0 0 0 1em;
+}
 #home {
   /* top: 120px; */
   width: 100%;
